@@ -1,0 +1,2333 @@
+
+:root {
+    --BkColor01: #567c66;
+    --BkColor02: #68A840;
+    --BkColor03: #52CD4F;
+    --BkColor04: #ADCD9F;
+    --BkColor05: #ececec;
+    --BkColor06: #ffffff;
+    --BkColor07: #4d822e;
+
+
+    /* Dark mode*/
+    --DarkBk_01: #0A312C;
+    --DarkBk_02: #22332E;
+    --DarkBk_03: #146646;
+    --DarkBk_04: #3D6649;
+
+    /*Font color*/
+
+    --FontColor01: #22332E;
+    --FontColor02: #146646;
+    --FontColor03: #52CD4F;
+    --FontColor04: #fff;
+
+    /*Border*/
+
+    --BdColor01: #567C6620;
+    --BdColor02: #68A84020;
+    --BdColor03: #52CD4F20;
+    --BdColor04: #ADCD9F20;
+    --BdColor05: #ececec20;
+    --BdColor06: #ffffff20;
+}
+
+@media screen and (min-width:1024px){
+    
+
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    flex-direction: column;
+   
+}
+
+.input {
+    flex: 1 1 auto;
+    width: 32%;
+    height: 10vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+.inputRCh {
+    flex: 1 1 auto;
+    width: 32%;
+    height: 10vh;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.blinput{
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0.5rem;
+    padding: 0 20px;
+}
+
+.title{
+    width: 100%;
+    margin: 20px 0;
+}
+label {
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+    font-weight: 500;
+    
+    
+
+}
+
+::placeholder{
+    color: var(--FontColor03);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/*Text*/
+input[type="text"],
+[type="number"],
+[type="date"], 
+[type="tel"], 
+[type="email"],
+[type="password"],
+[type="month"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="week"]
+ {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+
+input:focus {
+
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+
+}
+
+
+/*------ Text ------*/
+
+textarea{
+    width: 100%;
+    min-height: 70px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*CheckBox*/
+input[type="checkbox"] {
+    background-color: #fff;
+    border: 2px solid var(--BkColor02);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    border-radius: 3px;
+    background-color: var(--BkColor02);
+    color: #567C66;
+    width: 20px;
+    height: 20px;
+    border: 0.5rem solid var(--BkColor02);
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    top: -8px;
+    left: -3px;
+    transition: 0.2s ease-in-out;
+}
+
+/* ------ CheckBox ------*/
+
+
+/*Select*/
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 0.1em solid var(--BkColor02);
+    background-color: #fff;
+    color: var(--BkColor02);
+    font-family: 'Poppins', sans-serif;
+    padding-right: 2.5em; /* Espaço para a seta */
+}
+
+.custom-select::after {
+    content: "▼"; /* Seta personalizada */
+    font-size: 0.8em;
+    color: var(--BkColor02);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Faz com que a seta não interfira na seleção */
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*----- Select -----*/
+
+
+/* Radio */
+input[type="radio"] {
+
+    width: 20px;
+    height: 20px;
+    border:0.2rem solid var(--BkColor02);
+    border-radius: 50%; /* Deixa o botão redondo */
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  /* Estilizando quando o botão está marcado */
+  input[type="radio"]:checked {
+    background-color: var(--BkColor02);
+    border-color:var(--BkColor02);
+  }
+
+  /* Adicionando a bolinha interna quando marcado */
+  input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  /* Efeito de hover */
+  input[type="radio"]:hover {
+    border-color: var(--BkColor03);
+    transition: 0.2s ease-in-out;
+  }
+
+/*Password*/
+
+
+/*----- Password -----*/
+/*Email*/
+
+input[type="email"]{
+    color: var(--FontColor03);
+}
+
+
+/*------ Email */
+
+
+
+
+
+/* Esconder o input file real */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilizar o label como o botão de upload */
+.custom-file-upload {
+    
+    display: inline-block;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--BkColor02); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--BkColor01); /* Cor de fundo no hover */
+}
+
+.custom-file-upload:active {
+    background-color: var(--BkColor03); /* Cor de fundo no clique */
+}
+
+
+/*Range*/
+
+input[type="range"] {
+    
+    width: 100%;
+    height: 8px;
+    background-color: var(--BkColor05); /* Cor de fundo da barra */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo para o "thumb" (controle deslizante) no WebKit */
+input[type="range"]::-webkit-slider-thumb {
+    
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02); /* Cor do "thumb" */
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilo para o "thumb" no Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02);
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+}
+
+/* Cor da barra antes do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra antes do "thumb" no Firefox */
+input[type="range"]::-moz-range-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra depois do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor05); /* Cor da parte inativa */
+}
+
+/* Efeito de hover para o "thumb" */
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: var(--BkColor01); /* Cor do "thumb" ao passar o mouse */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--BkColor01);
+}
+
+
+/*Search */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+/* Estilo básico do input search */
+input[type="search"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px 15px;
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+    border-radius: 5px; /* Bordas arredondadas */
+    
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    
+    color: var(--FontColor01);
+    transition: border-color 0.3s ease-in-out;
+    outline: none; /* Remove a borda padrão */
+    background-image: url('img/lupa.svg'); /* Caminho para a imagem da lupa */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posição da imagem */
+    background-size: 20px; /* Tamanho do ícone */
+}
+
+/* Placeholder */
+input[type="search"]::placeholder {
+    color: var(--FontColor03);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Estilo ao focar no campo de pesquisa */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o botão de limpar (clear button) no Firefox */
+input[type="search"]::-moz-search-cancel-button {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Efeito ao passar o mouse */
+input[type="search"]:hover {
+    border-color: var(--BkColor01); /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Remove o X (clear) no campo de pesquisa para navegadores WebKit */
+input[type="search"]::-webkit-search-decoration {
+    display: none;
+}
+
+
+
+/*Date*/
+/* Contêiner do input e do botão */
+.date-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão do seletor de data */
+.date-button {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--BkColor02);
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.date-button:hover {
+    color: var(--BkColor03);
+}
+
+/* Estilo do input date */
+input[type="date"] {
+    width: 100%;
+    height: 35px;
+    
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--FontColor03);
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Estilo ao focar */
+
+
+
+
+/*Week*/
+
+/* Estilo básico do input week */
+input[type="week"] {
+   
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+
+/* Estilo ao focar */
+
+/* Remove o estilo padrão do botão de calendário no Firefox */
+input[type="week"]::-moz-calendar-picker-indicator {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Remove o estilo padrão do botão de calendário no Edge */
+input[type="week"]::-ms-calendar-picker {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Estilo básico do input color */
+input[type="color"] {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    border: 2px solid var(--BkColor02);
+    border-radius: 5px;
+    background: none;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Datetime local*/
+
+
+input[type="datetime-local"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+input[type="datetime-local"]:disabled {
+    background-color: #e0e0e0;
+    border-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Ajustando o foco para o input */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.ibottons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 40vh;
+    
+    
+    
+}
+.ibottonsDark{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 40vh;
+    background: var(--DarkBk_01);
+    color: var(--FontColor04);
+    
+    
+    
+}
+.titleibottons{
+    width: 100%;
+}
+.bottonGroup{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.titleGroup{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    
+
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    flex-direction: column;
+   
+}
+
+.input {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+.inputRCh {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.blinput{
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0.5rem;
+    padding: 20px;
+    width: auto;
+}
+
+.title{
+    width: 100%;
+    margin: 20px 0;
+}
+label {
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+    font-weight: 500;
+    
+    
+
+}
+
+::placeholder{
+    color: var(--FontColor03);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/*Text*/
+input[type="text"],
+[type="number"],
+[type="date"], 
+[type="tel"], 
+[type="email"],
+[type="password"],
+[type="month"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="week"]
+ {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+
+input:focus {
+
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+
+}
+
+
+/*------ Text ------*/
+
+textarea{
+    width: 100%;
+    min-height: 70px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*CheckBox*/
+input[type="checkbox"] {
+    background-color: #fff;
+    border: 2px solid var(--BkColor02);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    border-radius: 3px;
+    background-color: var(--BkColor02);
+    color: #567C66;
+    width: 20px;
+    height: 20px;
+    border: 0.5rem solid var(--BkColor02);
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    top: -8px;
+    left: -3px;
+    transition: 0.2s ease-in-out;
+}
+
+/* ------ CheckBox ------*/
+
+
+/*Select*/
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 0.1em solid var(--BkColor02);
+    background-color: #fff;
+    color: var(--BkColor02);
+    font-family: 'Poppins', sans-serif;
+    padding-right: 2.5em; /* Espaço para a seta */
+}
+
+.custom-select::after {
+    content: "▼"; /* Seta personalizada */
+    font-size: 0.8em;
+    color: var(--BkColor02);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Faz com que a seta não interfira na seleção */
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*----- Select -----*/
+
+
+/* Radio */
+input[type="radio"] {
+
+    width: 20px;
+    height: 20px;
+    border:0.2rem solid var(--BkColor02);
+    border-radius: 50%; /* Deixa o botão redondo */
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  /* Estilizando quando o botão está marcado */
+  input[type="radio"]:checked {
+    background-color: var(--BkColor02);
+    border-color:var(--BkColor02);
+  }
+
+  /* Adicionando a bolinha interna quando marcado */
+  input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  /* Efeito de hover */
+  input[type="radio"]:hover {
+    border-color: var(--BkColor03);
+    transition: 0.2s ease-in-out;
+  }
+
+/*Password*/
+
+
+/*----- Password -----*/
+/*Email*/
+
+input[type="email"]{
+    color: var(--FontColor03);
+}
+
+
+/*------ Email */
+
+
+
+
+
+/* Esconder o input file real */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilizar o label como o botão de upload */
+.custom-file-upload {
+    
+    display: inline-block;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--BkColor02); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--BkColor01); /* Cor de fundo no hover */
+}
+
+.custom-file-upload:active {
+    background-color: var(--BkColor03); /* Cor de fundo no clique */
+}
+
+
+/*Range*/
+
+input[type="range"] {
+    
+    width: 100%;
+    height: 8px;
+    background-color: var(--BkColor05); /* Cor de fundo da barra */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo para o "thumb" (controle deslizante) no WebKit */
+input[type="range"]::-webkit-slider-thumb {
+    
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02); /* Cor do "thumb" */
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilo para o "thumb" no Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02);
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+}
+
+/* Cor da barra antes do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra antes do "thumb" no Firefox */
+input[type="range"]::-moz-range-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra depois do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor05); /* Cor da parte inativa */
+}
+
+/* Efeito de hover para o "thumb" */
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: var(--BkColor01); /* Cor do "thumb" ao passar o mouse */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--BkColor01);
+}
+
+
+/*Search */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+/* Estilo básico do input search */
+input[type="search"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px 15px;
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+    border-radius: 5px; /* Bordas arredondadas */
+    
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    
+    color: var(--FontColor01);
+    transition: border-color 0.3s ease-in-out;
+    outline: none; /* Remove a borda padrão */
+    background-image: url('img/lupa.svg'); /* Caminho para a imagem da lupa */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posição da imagem */
+    background-size: 20px; /* Tamanho do ícone */
+}
+
+/* Placeholder */
+input[type="search"]::placeholder {
+    color: var(--FontColor03);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Estilo ao focar no campo de pesquisa */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o botão de limpar (clear button) no Firefox */
+input[type="search"]::-moz-search-cancel-button {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Efeito ao passar o mouse */
+input[type="search"]:hover {
+    border-color: var(--BkColor01); /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Remove o X (clear) no campo de pesquisa para navegadores WebKit */
+input[type="search"]::-webkit-search-decoration {
+    display: none;
+}
+
+
+
+/*Date*/
+/* Contêiner do input e do botão */
+.date-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão do seletor de data */
+.date-button {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--BkColor02);
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.date-button:hover {
+    color: var(--BkColor03);
+}
+
+/* Estilo do input date */
+input[type="date"] {
+    width: 100%;
+    height: 35px;
+    
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--FontColor03);
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Estilo ao focar */
+
+
+
+
+/*Week*/
+
+/* Estilo básico do input week */
+input[type="week"] {
+   
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+
+/* Estilo ao focar */
+
+/* Remove o estilo padrão do botão de calendário no Firefox */
+input[type="week"]::-moz-calendar-picker-indicator {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Remove o estilo padrão do botão de calendário no Edge */
+input[type="week"]::-ms-calendar-picker {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Estilo básico do input color */
+input[type="color"] {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    border: 2px solid var(--BkColor02);
+    border-radius: 5px;
+    background: none;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Datetime local*/
+
+
+input[type="datetime-local"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+input[type="datetime-local"]:disabled {
+    background-color: #e0e0e0;
+    border-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Ajustando o foco para o input */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.ibottonsLight{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    
+    
+}
+.titleibottons{
+    width: 100%;
+}
+.bottonGroup{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.titleGroup{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+}
+@media screen and (min-width:481px) and (max-width:767px){
+    
+
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    flex-direction: column;
+   
+}
+
+.input {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+.inputRCh {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.blinput{
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0.5rem;
+    padding: 20px;
+    width: auto;
+}
+
+.title{
+    width: 100%;
+    margin: 20px 0;
+}
+label {
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+    font-weight: 500;
+    
+    
+
+}
+
+::placeholder{
+    color: var(--FontColor03);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/*Text*/
+input[type="text"],
+[type="number"],
+[type="date"], 
+[type="tel"], 
+[type="email"],
+[type="password"],
+[type="month"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="week"]
+ {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+
+input:focus {
+
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+
+}
+
+
+/*------ Text ------*/
+
+textarea{
+    width: 100%;
+    min-height: 70px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*CheckBox*/
+input[type="checkbox"] {
+    background-color: #fff;
+    border: 2px solid var(--BkColor02);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    border-radius: 3px;
+    background-color: var(--BkColor02);
+    color: #567C66;
+    width: 20px;
+    height: 20px;
+    border: 0.5rem solid var(--BkColor02);
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    top: -8px;
+    left: -3px;
+    transition: 0.2s ease-in-out;
+}
+
+/* ------ CheckBox ------*/
+
+
+/*Select*/
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 0.1em solid var(--BkColor02);
+    background-color: #fff;
+    color: var(--BkColor02);
+    font-family: 'Poppins', sans-serif;
+    padding-right: 2.5em; /* Espaço para a seta */
+}
+
+.custom-select::after {
+    content: "▼"; /* Seta personalizada */
+    font-size: 0.8em;
+    color: var(--BkColor02);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Faz com que a seta não interfira na seleção */
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*----- Select -----*/
+
+
+/* Radio */
+input[type="radio"] {
+
+    width: 20px;
+    height: 20px;
+    border:0.2rem solid var(--BkColor02);
+    border-radius: 50%; /* Deixa o botão redondo */
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  /* Estilizando quando o botão está marcado */
+  input[type="radio"]:checked {
+    background-color: var(--BkColor02);
+    border-color:var(--BkColor02);
+  }
+
+  /* Adicionando a bolinha interna quando marcado */
+  input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  /* Efeito de hover */
+  input[type="radio"]:hover {
+    border-color: var(--BkColor03);
+    transition: 0.2s ease-in-out;
+  }
+
+/*Password*/
+
+
+/*----- Password -----*/
+/*Email*/
+
+input[type="email"]{
+    color: var(--FontColor03);
+}
+
+
+/*------ Email */
+
+
+
+
+
+/* Esconder o input file real */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilizar o label como o botão de upload */
+.custom-file-upload {
+    
+    display: inline-block;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--BkColor02); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--BkColor01); /* Cor de fundo no hover */
+}
+
+.custom-file-upload:active {
+    background-color: var(--BkColor03); /* Cor de fundo no clique */
+}
+
+
+/*Range*/
+
+input[type="range"] {
+    
+    width: 100%;
+    height: 8px;
+    background-color: var(--BkColor05); /* Cor de fundo da barra */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo para o "thumb" (controle deslizante) no WebKit */
+input[type="range"]::-webkit-slider-thumb {
+    
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02); /* Cor do "thumb" */
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilo para o "thumb" no Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02);
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+}
+
+/* Cor da barra antes do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra antes do "thumb" no Firefox */
+input[type="range"]::-moz-range-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra depois do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor05); /* Cor da parte inativa */
+}
+
+/* Efeito de hover para o "thumb" */
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: var(--BkColor01); /* Cor do "thumb" ao passar o mouse */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--BkColor01);
+}
+
+
+/*Search */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+/* Estilo básico do input search */
+input[type="search"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px 15px;
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+    border-radius: 5px; /* Bordas arredondadas */
+    
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    
+    color: var(--FontColor01);
+    transition: border-color 0.3s ease-in-out;
+    outline: none; /* Remove a borda padrão */
+    background-image: url('img/lupa.svg'); /* Caminho para a imagem da lupa */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posição da imagem */
+    background-size: 20px; /* Tamanho do ícone */
+}
+
+/* Placeholder */
+input[type="search"]::placeholder {
+    color: var(--FontColor03);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Estilo ao focar no campo de pesquisa */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o botão de limpar (clear button) no Firefox */
+input[type="search"]::-moz-search-cancel-button {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Efeito ao passar o mouse */
+input[type="search"]:hover {
+    border-color: var(--BkColor01); /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Remove o X (clear) no campo de pesquisa para navegadores WebKit */
+input[type="search"]::-webkit-search-decoration {
+    display: none;
+}
+
+
+
+/*Date*/
+/* Contêiner do input e do botão */
+.date-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão do seletor de data */
+.date-button {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--BkColor02);
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.date-button:hover {
+    color: var(--BkColor03);
+}
+
+/* Estilo do input date */
+input[type="date"] {
+    width: 100%;
+    height: 35px;
+    
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--FontColor03);
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Estilo ao focar */
+
+
+
+
+/*Week*/
+
+/* Estilo básico do input week */
+input[type="week"] {
+   
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+
+/* Estilo ao focar */
+
+/* Remove o estilo padrão do botão de calendário no Firefox */
+input[type="week"]::-moz-calendar-picker-indicator {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Remove o estilo padrão do botão de calendário no Edge */
+input[type="week"]::-ms-calendar-picker {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Estilo básico do input color */
+input[type="color"] {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    border: 2px solid var(--BkColor02);
+    border-radius: 5px;
+    background: none;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Datetime local*/
+
+
+input[type="datetime-local"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+input[type="datetime-local"]:disabled {
+    background-color: #e0e0e0;
+    border-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Ajustando o foco para o input */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.ibottonsLight {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    
+    
+}
+.titleibottons{
+    width: 100%;
+}
+.bottonGroup{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.titleGroup{
+    width: 100%;
+    text-align: center;
+}
+
+}
+@media screen and (max-width:480px){
+    
+
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    flex-direction: column;
+   
+}
+
+.input {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+.inputRCh {
+    flex: 1 1 49%;
+    width: 49%;
+    height: 10vh;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.blinput{
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0.5rem;
+    padding: 20px;
+    width: auto;
+}
+
+.title{
+    width: 100%;
+    margin: 20px 0;
+}
+label {
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+    font-weight: 500;
+    
+    
+
+}
+
+::placeholder{
+    color: var(--FontColor03);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/*Text*/
+input[type="text"],
+[type="number"],
+[type="date"], 
+[type="tel"], 
+[type="email"],
+[type="password"],
+[type="month"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="week"]
+ {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+}
+
+
+input:focus {
+
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+
+}
+
+
+/*------ Text ------*/
+
+textarea{
+    width: 100%;
+    min-height: 70px;
+    border-radius: 5px;
+    color: var(--colorone);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*CheckBox*/
+input[type="checkbox"] {
+    background-color: #fff;
+    border: 2px solid var(--BkColor02);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    border-radius: 3px;
+    background-color: var(--BkColor02);
+    color: #567C66;
+    width: 20px;
+    height: 20px;
+    border: 0.5rem solid var(--BkColor02);
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    top: -8px;
+    left: -3px;
+    transition: 0.2s ease-in-out;
+}
+
+/* ------ CheckBox ------*/
+
+
+/*Select*/
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 0.1em solid var(--BkColor02);
+    background-color: #fff;
+    color: var(--BkColor02);
+    font-family: 'Poppins', sans-serif;
+    padding-right: 2.5em; /* Espaço para a seta */
+}
+
+.custom-select::after {
+    content: "▼"; /* Seta personalizada */
+    font-size: 0.8em;
+    color: var(--BkColor02);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Faz com que a seta não interfira na seleção */
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: var(--BkColor03);
+    box-shadow: 0 0 5px var(--BkColor03);
+    transition: 0.2s ease-in-out;
+    color: var(--colortwo);
+}
+
+
+/*----- Select -----*/
+
+
+/* Radio */
+input[type="radio"] {
+
+    width: 20px;
+    height: 20px;
+    border:0.2rem solid var(--BkColor02);
+    border-radius: 50%; /* Deixa o botão redondo */
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  /* Estilizando quando o botão está marcado */
+  input[type="radio"]:checked {
+    background-color: var(--BkColor02);
+    border-color:var(--BkColor02);
+  }
+
+  /* Adicionando a bolinha interna quando marcado */
+  input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  /* Efeito de hover */
+  input[type="radio"]:hover {
+    border-color: var(--BkColor03);
+    transition: 0.2s ease-in-out;
+  }
+
+/*Password*/
+
+
+/*----- Password -----*/
+/*Email*/
+
+input[type="email"]{
+    color: var(--FontColor03);
+}
+
+
+/*------ Email */
+
+
+
+
+
+/* Esconder o input file real */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilizar o label como o botão de upload */
+.custom-file-upload {
+    
+    display: inline-block;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--BkColor02); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--BkColor01); /* Cor de fundo no hover */
+}
+
+.custom-file-upload:active {
+    background-color: var(--BkColor03); /* Cor de fundo no clique */
+}
+
+
+/*Range*/
+
+input[type="range"] {
+    
+    width: 100%;
+    height: 8px;
+    background-color: var(--BkColor05); /* Cor de fundo da barra */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo para o "thumb" (controle deslizante) no WebKit */
+input[type="range"]::-webkit-slider-thumb {
+    
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02); /* Cor do "thumb" */
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilo para o "thumb" no Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--BkColor02);
+    border-radius: 50%;
+    border: 2px solid var(--BkColor03);
+    cursor: pointer;
+}
+
+/* Cor da barra antes do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra antes do "thumb" no Firefox */
+input[type="range"]::-moz-range-track {
+    background: var(--BkColor02); /* Cor da parte ativa */
+}
+
+/* Cor da barra depois do "thumb" no WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--BkColor05); /* Cor da parte inativa */
+}
+
+/* Efeito de hover para o "thumb" */
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: var(--BkColor01); /* Cor do "thumb" ao passar o mouse */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--BkColor01);
+}
+
+
+/*Search */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+/* Estilo básico do input search */
+input[type="search"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px 15px;
+    padding-left: 40px; /* Espaçamento à esquerda para o ícone */
+    border-radius: 5px; /* Bordas arredondadas */
+    
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    
+    color: var(--FontColor01);
+    transition: border-color 0.3s ease-in-out;
+    outline: none; /* Remove a borda padrão */
+    background-image: url('img/lupa.svg'); /* Caminho para a imagem da lupa */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posição da imagem */
+    background-size: 20px; /* Tamanho do ícone */
+}
+
+/* Placeholder */
+input[type="search"]::placeholder {
+    color: var(--FontColor03);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Estilo ao focar no campo de pesquisa */
+
+
+/* Remove o botão de limpar (clear button) no WebKit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o botão de limpar (clear button) no Firefox */
+input[type="search"]::-moz-search-cancel-button {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Efeito ao passar o mouse */
+input[type="search"]:hover {
+    border-color: var(--BkColor01); /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Remove o X (clear) no campo de pesquisa para navegadores WebKit */
+input[type="search"]::-webkit-search-decoration {
+    display: none;
+}
+
+
+
+/*Date*/
+/* Contêiner do input e do botão */
+.date-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão do seletor de data */
+.date-button {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--BkColor02);
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.date-button:hover {
+    color: var(--BkColor03);
+}
+
+/* Estilo do input date */
+input[type="date"] {
+    width: 100%;
+    height: 35px;
+    
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--FontColor03);
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Estilo ao focar */
+
+
+
+
+/*Week*/
+
+/* Estilo básico do input week */
+input[type="week"] {
+   
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+
+/* Estilo ao focar */
+
+/* Remove o estilo padrão do botão de calendário no Firefox */
+input[type="week"]::-moz-calendar-picker-indicator {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Remove o estilo padrão do botão de calendário no Edge */
+input[type="week"]::-ms-calendar-picker {
+    background-color: var(--BkColor02);
+    border-radius: 5px;
+}
+
+/* Estilo básico do input color */
+input[type="color"] {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    border: 2px solid var(--BkColor02);
+    border-radius: 5px;
+    background: none;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Datetime local*/
+
+
+input[type="datetime-local"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--FontColor03);
+    border: 0.1em solid var(--BkColor02);
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+}
+input[type="datetime-local"]:disabled {
+    background-color: #e0e0e0;
+    border-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Ajustando o foco para o input */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.ibottonsLight{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    
+    
+}
+.titleibottons{
+    width: 100%;
+}
+.bottonGroup{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.titleGroup{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .inputs{
+        padding: 0 20px;
+    }
+    .input {
+        width: 49%;
+        flex: 1 1 49%;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+    .inputs {
+        padding: 0 20px;
+    }
+    .input {
+        width: 49%;
+        margin: 15px 0;
+        flex: 1 1 49%;
+    }
+    .textarea{
+        width: 100%;
+        min-height: 150px;
+        border-radius: 5px;
+        color: var(--colorone);
+        border: 0.1em solid var(--BkColor02);
+        padding: 2%;
+        resize: vertical; /* Permite redimensionar verticalmente */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        
+        
+    
+    }
+    
+}
+}
+
+

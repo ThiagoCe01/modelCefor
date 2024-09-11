@@ -1,0 +1,412 @@
+/*Containers*/
+
+:root {
+    --BkColor01: #567c66;
+    --BkColor02: #68A840;
+    --BkColor03: #52CD4F;
+    --BkColor04: #ADCD9F;
+    --BkColor05: #ececec;
+    --BkColor06: #ffffff;
+    --BkColor07: #4d822e;
+
+
+    /* Dark mode*/
+    --DarkBk_01: #0A312C;
+    --DarkBk_02: #22332E;
+    --DarkBk_03: #146646;
+    --DarkBk_04: #3D6649;
+
+    /*Font color*/
+
+    --FontColor01: #22332E;
+    --FontColor02: #146646;
+    --FontColor03: #52CD4F;
+    --FontColor04: #fff;
+
+    /*Border*/
+
+    --BdColor01: #567C6620;
+    --BdColor02: #68A84020;
+    --BdColor03: #52CD4F20;
+    --BdColor04: #ADCD9F20;
+    --BdColor05: #ececec20;
+    --BdColor06: #ffffff20;
+
+
+
+}
+@media screen and (min-width: 1024px){
+    body.dark-mode .container1 {
+        background: var(--BkColor07); /* Muda para a cor escura */
+        color: var(--FontColor04); /* Texto claro no modo escuro */
+    }
+    
+    body.dark-mode .container2 {
+        background: var(--BkColor03); /* Cor mais escura para containers */
+        color: var(--FontColor04); /* Texto claro no modo escuro */
+    }
+    
+    body.dark-mode {
+        --BkColor01: var(--DarkBk_01);
+        --BkColor02: var(--DarkBk_02);
+        --BkColor03: var(--DarkBk_03);
+        --BkColor04: var(--DarkBk_04);
+        --BkColor05: #333; /* Cor mais escura para o fundo */
+        --BkColor06: #444; /* Fundo mais escuro */
+        --BkColor07: var(--DarkBk_03); /* Cor de destaque para containers no modo escuro */
+    
+        --FontColor01: #ddd; /* Cor mais clara para os textos no modo escuro */
+        --FontColor02: #aaa;
+        --FontColor03: #9acd32;
+        --FontColor04: #fff;
+    
+        --BdColor01: rgba(255, 255, 255, 0.2); /* Bordas mais claras no modo escuro */
+        --BdColor02: rgba(255, 255, 255, 0.2);
+        --BdColor03: rgba(255, 255, 255, 0.2);
+        --BdColor04: rgba(255, 255, 255, 0.2);
+        --BdColor05: rgba(255, 255, 255, 0.2);
+        --BdColor06: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Exibir elementos diferentes para os dispositivos no dark mode */
+    body.dark-mode .desktop {
+        color: var(--FontColor04);
+    }
+    body.dark-mode .tablet {
+        display: none;
+    }
+    body.dark-mode .Mobile {
+        display: none;
+    }
+        
+        .containers1{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .container1{
+        
+            width: 100%;
+            min-height: 20vh;
+            color: var(--FontColor04);
+            background: var(--BkColor07);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            
+            
+        }
+        .containers2{
+            display: flex;
+            width: 100%;
+            min-height: auto;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .container2{
+        
+            width: 100%;
+            height: 20vh;
+            min-height: auto;
+            color: var(--FontColor04);
+            background: var(--BkColor03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 49%;
+            
+            
+            
+        }
+        .desktop{
+            display: none;
+        }
+        .tablet{
+            
+            display: none;
+        }
+        .Mobile{
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    
+
+    .containers1{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container1{
+    
+        width: 24%;
+        min-height: 20vh;
+        color: var(--FontColor04);
+        background: var(--BkColor07);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        
+        
+    }
+    .containers2{
+        display: flex;
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .container2{
+    
+        width: 32%;
+        height: 20vh;
+        min-height: auto;
+        color: var(--FontColor04);
+        background: var(--BkColor03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 32%;
+        
+        
+        
+    }
+    .desktop{
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+
+    }
+    .tablet{
+        display: none;
+    }
+    .Mobile{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    
+    .containers1{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container1{
+    
+        width: 100%;
+        min-height: 20vh;
+        color: var(--FontColor04);
+        background: var(--BkColor07);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        
+        
+    }
+    .containers2{
+        display: flex;
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .container2{
+    
+        width: 100%;
+        height: 20vh;
+        min-height: auto;
+        color: var(--FontColor04);
+        background: var(--BkColor03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 49%;
+        
+        
+        
+    }
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        
+        display: none;
+    }
+    .Mobile{
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+}
+@media screen and (min-width: 481px) and (max-width:767px) {
+    
+    
+    .containers1{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container1{
+    
+        width: 49%;
+        min-height: 20vh;
+        color: var(--FontColor04);
+        background: var(--BkColor07);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        
+        
+    }
+    .containers2{
+        display: flex;
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .container2{
+    
+        width: 49%;
+        height: 20vh;
+        min-height: auto;
+        color: var(--FontColor04);
+        background: var(--BkColor03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 49%;
+        
+        
+        
+    }
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+
+    }
+    .Mobile{
+        display: none;
+    }
+    
+
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+   
+    .containers1{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container1{
+    
+        width: 49%;
+        min-height: 20vh;
+        color: var(--FontColor04);
+        background: var(--BkColor07);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        
+        
+    }
+    .containers2{
+        display: flex;
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .container2{
+    
+        width: 32%;
+        height: 20vh;
+        min-height: auto;
+        color: var(--FontColor04);
+        background: var(--BkColor03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 32%;
+        
+        
+        
+    }
+    .desktop{
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+
+    }
+    .tablet{
+        display: none;
+    }
+    .Mobile{
+        display: none;
+    }
+    
+}
+
+
+/* --- Containers ---*/

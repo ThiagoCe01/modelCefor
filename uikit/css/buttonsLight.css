@@ -1,0 +1,248 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+
+:root {
+    --BkColor01: #567c66;
+    --BkColor02: #68A840;
+    --BkColor03: #52CD4F;
+    --BkColor04: #ADCD9F;
+    --BkColor05: #ececec;
+    --BkColor06: #ffffff;
+    --BkColor07: #4d822e;
+
+
+    /* Dark mode*/
+    --DarkBk_01: #0A312C;
+    --DarkBk_02: #22332E;
+    --DarkBk_03: #146646;
+    --DarkBk_04: #3D6649;
+
+    /*Font color*/
+
+    --FontColor01: #22332E;
+    --FontColor02: #146646;
+    --FontColor03: #52CD4F;
+    --FontColor04: #fff;
+
+    /*Border*/
+
+    --BdColor01: #567C6620;
+    --BdColor02: #68A84020;
+    --BdColor03: #52CD4F20;
+    --BdColor04: #ADCD9F20;
+    --BdColor05: #ececec20;
+    --BdColor06: #ffffff20;
+
+
+
+}
+.component{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout{
+width: 100%;
+max-width: 1024px;
+height: 100vh;
+padding: 2%;
+}
+.LightTheme{
+    width: 100%;
+    height: 50vh;
+}
+.DarkTheme{
+    width: 100%;
+    height: 50vh;
+    background: var(--DarkBk_01);
+}
+
+/*----------------------*/
+
+
+.defaultButtonsLigth{
+    display: flex;
+    padding-inline: 1%;
+    width: 100%;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.LargeButtonsLigth{
+    display: flex;
+    padding-inline: 1%;
+    width: 100%;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.defaultButtonsDark{
+    display: flex;
+    
+    padding-inline: 1%;
+    width: 100%;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.largeButtons{
+    display: flex;
+    padding-inline: 1%;
+    
+    width: 100%;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.defaultButtonOne{
+    width: 138px;
+    height: 38px;
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.defaultButtonTwo{
+    width: 138px;
+    height: 38px;
+    background-color: var(--BkColor04);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--FontColor01);
+    font-weight: 500;
+}
+.defaultButtonTree{
+    width: 138px;
+    height: 38px;
+    background-color: var(--BkColor03);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--FontColor04);
+    font-weight: 500;
+}
+.defaultButtonfour{
+    width: 138px;
+    height: 38px;
+    background-color: #d6d6d6;
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #949393;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+.largeButtonOne{
+    width: 138px;
+    height: 38px;
+    border: 0.1rem solid var(--BkColor02);
+    color: var(--BkColor02);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.largeButtonTwo{
+    width: 138px;
+    height: 38px;
+    background-color: var(--DarkBk_03);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--BkColor04);
+    font-weight: 500;
+}
+.largeButtonTree{
+    width: 138px;
+    height: 38px;
+    background-color: var(--DarkBk_04);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--FontColor04);
+    font-weight: 500;
+}
+.largeButtonfour{
+    width: 138px;
+    height: 38px;
+    background-color: var(--FontColor01);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--DarkBk_04);
+    font-weight: 500;
+}
+.largeButtonOneLight{
+    width: 138px;
+    height: 38px;
+    border: 0.1rem solid var(--BkColor02);
+    color: var(--BkColor02);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.largeButtonTwoLight{
+    width: 138px;
+    height: 38px;
+    background-color: var(--DarkBk_03);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--BkColor04);
+    font-weight: 500;
+}
+.largeButtonTreeLight{
+    width: 138px;
+    height: 38px;
+    background-color: var(--DarkBk_04);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--FontColor04);
+    font-weight: 500;
+}
+.largeButtonfourLight{
+    width: 138px;
+    height: 38px;
+    background-color: var(--FontColor01);
+    box-shadow: 0 4px 4px #00000025;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--DarkBk_04);
+    font-weight: 500;
+}

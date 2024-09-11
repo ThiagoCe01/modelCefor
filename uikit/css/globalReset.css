@@ -1,0 +1,82 @@
+/* reset.css */
+
+/* Remove margens, preenchimentos e define box-sizing para border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Remove a borda de elementos focados */
+  *:focus {
+    outline: none;
+  }
+  
+  /* Define estilo básico para o body */
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Define largura total para elementos block-level */
+  article, aside, footer, header, nav, section, main {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Remove lista de estilo padrão */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Define estilo padrão para links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove bordas e estilos de botões */
+  button, input, textarea {
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  /* Define largura completa para imagens */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Remove decorações em títulos */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.2;
+  }
+  
+  /* Define estilo padrão para tabelas */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Remove espaçamento entre células de tabela */
+  th, td {
+    padding: 0;
+    text-align: left;
+  }
+  
+  /* Remove os estilos de cotações em blockquote */
+  blockquote {
+    margin: 0;
+  }
+  
+  /* Define estilo básico para formulários */
+  input, textarea, select {
+    font-size: 100%;
+  }
+  
