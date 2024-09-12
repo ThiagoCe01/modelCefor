@@ -44,18 +44,41 @@ body {
 
 
 }
+.Navs{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .component{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.containers1{
+    margin: 5% 0 0 0 ;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    height: 100vh;
+    padding: 5% 0;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .layout{
 width: 100%;
-max-width: 1024px;
+
 height: 100vh;
 padding: 2%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 .LightTheme{
     width: 100%;
@@ -139,6 +162,13 @@ padding: 2%;
     cursor: pointer;
     color: var(--FontColor04);
     font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.defaultButtonTree:hover{
+    transition: 0.3s ease-in-out;
+background-color: var(--BkColor01);
+   
 }
 .defaultButtonfour{
     width: 138px;
